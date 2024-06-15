@@ -3,6 +3,7 @@ package com.CrudApp.Model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 public class Person {
@@ -14,7 +15,7 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private LocalDate birthDate;
+    private Date birthDate;
     private String gender;
     private String favouriteTeam;
 
@@ -41,11 +42,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public LocalDate getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDate birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
 
