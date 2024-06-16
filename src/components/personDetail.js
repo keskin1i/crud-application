@@ -1,4 +1,4 @@
-// src/components/KisiDetayi.js
+// src/components/personDetail.js
 import React, { useState, useEffect } from 'react';
 import api from '../api';
 import { useParams } from 'react-router-dom';
