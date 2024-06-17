@@ -14,17 +14,16 @@ import java.util.Optional;
 public class PersonController {
 
 
-    // PersonService'nin otomatik olarak enjekte edilmesini sağlar.
     @Autowired
     private PersonService personService;
 
-    // Tüm kişileri getirir.
+
     @GetMapping
     public List<Person> getAllPerson() {
         return personService.findAll();
     }
 
-    // Belirli bir ID'ye sahip kişiyi getirir.
+
     @GetMapping("/{id}")
     public ResponseEntity<Person> getPersonById(@PathVariable Long id) {
         Optional<Person> person = personService.findById(id);
@@ -35,13 +34,13 @@ public class PersonController {
         }
     }
 
-    // Yeni bir kişi oluşturur.
+
     @PostMapping
     public Person createPerson(@RequestBody Person person) {
         return personService.save(person);
     }
 
-    // Belirli bir ID'ye sahip kişiyi günceller.
+
     @PutMapping("/{id}")
     public ResponseEntity<Person> updatePerson(@PathVariable Long id, @RequestBody Person updatedPerson) {
         Optional<Person> person = personService.findById(id);
@@ -59,7 +58,7 @@ public class PersonController {
         }
     }
 
-    // Belirli bir ID'ye sahip kişiyi siler.
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePerson(@PathVariable Long id) {
         Optional<Person> person = personService.findById(id);
