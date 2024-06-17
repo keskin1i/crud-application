@@ -23,7 +23,6 @@ public class PersonController {
         return personService.findAll();
     }
 
-
     @GetMapping("/{id}")
     public ResponseEntity<Person> getPersonById(@PathVariable Long id) {
         Optional<Person> person = personService.findById(id);
