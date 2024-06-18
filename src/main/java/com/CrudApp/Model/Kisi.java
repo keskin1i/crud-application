@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 // @Entity anotasyonu, bu sınıfın bir JPA varlığı olduğunu belirtir.
