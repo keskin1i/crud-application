@@ -1,3 +1,4 @@
+/*
 package com.CrudApp.Model;
 
 import jakarta.persistence.*;
@@ -69,3 +70,4 @@ public class Person {
 
 
 }
+*/

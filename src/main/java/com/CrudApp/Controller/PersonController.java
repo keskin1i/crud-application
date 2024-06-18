@@ -1,6 +1,6 @@
 package com.CrudApp.Controller;
 
-import com.CrudApp.Model.Person;
+/*import com.CrudApp.Model.Person;
 import com.CrudApp.Service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -68,4 +68,4 @@ public class PersonController {
             return ResponseEntity.notFound().build();
         }
     }
-}
+}*/
