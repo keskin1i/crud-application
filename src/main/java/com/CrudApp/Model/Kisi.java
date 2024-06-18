@@ -7,11 +7,11 @@ import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 
-// @Entity anotasyonu, bu sınıfın bir JPA varlığı olduğunu belirtir.
+
 @Entity
 public class Kisi {
 
-    // @Id ve @GeneratedValue anotasyonları, bu alanın birincil anahtar olduğunu ve otomatik olarak oluşturulacağını belirtir.
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,7 +22,7 @@ public class Kisi {
     private String cinsiyet;
     private String tuttuguTakim;
 
-    // Getters ve Setters yöntemleri
+
     public Long getId() {
         return id;
     }
