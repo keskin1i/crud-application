@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-// @RestController anotasyonu, bu sınıfın bir RESTful web servis denetleyicisi olduğunu belirtir.
+
 @RestController
 @RequestMapping("/api/kisiler")
 @CrossOrigin(origins = "http://localhost:3000")
