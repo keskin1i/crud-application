@@ -16,17 +16,17 @@ import java.util.Optional;
 @CrossOrigin(origins = "http://localhost:3000")
 public class KisiController {
 
-    // KisiService'nin otomatik olarak enjekte edilmesini sağlar.
+
     @Autowired
     private KisiService kisiService;
 
-    // Tüm kişileri getirir.
+
     @GetMapping
     public List<Kisi> getAllKisiler() {
         return kisiService.findAll();
     }
 
-    // Belirli bir ID'ye sahip kişiyi getirir.
+
     @GetMapping("/{id}")
     public ResponseEntity<Kisi> getKisiById(@PathVariable Long id) {
         Optional<Kisi> kisi = kisiService.findById(id);
@@ -37,13 +37,13 @@ public class KisiController {
         }
     }
 
-    // Yeni bir kişi oluşturur.
+
     @PostMapping
     public Kisi createKisi(@RequestBody Kisi kisi) {
         return kisiService.save(kisi);
     }
 
-    // Belirli bir ID'ye sahip kişiyi günceller.
+
     @PutMapping("/{id}")
     public ResponseEntity<Kisi> updateKisi(@PathVariable Long id, @RequestBody Kisi updatedKisi) {
         Optional<Kisi> kisi = kisiService.findById(id);
@@ -61,7 +61,7 @@ public class KisiController {
         }
     }
 
-    // Belirli bir ID'ye sahip kişiyi siler.
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteKisi(@PathVariable Long id) {
         Optional<Kisi> kisi = kisiService.findById(id);
